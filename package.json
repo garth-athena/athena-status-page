@@ -1,0 +1,20 @@
+{
+  "name": "athena-status-page",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -b && vite build",
+    "dev": "vite",
+    "preview": "vite preview",
+    "start": "vite"
+  },
+  "dependencies": {
+    "preact": "^10.25.0"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.9.1",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.1"
+  }
+}
