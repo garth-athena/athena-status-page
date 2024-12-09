@@ -1,10 +1,15 @@
-import useGithubStars from "../hooks/useGithubStars";
+import { Image } from "../components/Image";
 
 export const Header = () => {
-  const { stars } = useGithubStars();
   return (
     <header>
-      <h1>Athena Status Page {stars}</h1>
+      <a
+        title="Athena Status Page"
+        href="/"
+        style={{ display: "block", width: 54 }}
+      >
+        <Image src="./athena.png" alt="athena" aspectRatio="540 / 480"></Image>
+      </a>
     </header>
   );
 };

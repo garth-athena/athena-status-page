@@ -34,7 +34,7 @@ export const Address = () => {
         style={{
           backgroundColor: statusColors[status as keyof typeof statusColors],
           borderRadius: 4,
-          fontWeight: 900,
+          fontWeight: 700,
           height: 24,
           paddingBottom: 8,
           paddingLeft: 16,
