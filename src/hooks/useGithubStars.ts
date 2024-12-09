@@ -1,29 +1,31 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 const useGithubStars = () => {
   const [state, setState] = useState({
-    status: 'pending',
+    status: "pending",
     stars: null,
   });
 
   useEffect(() => {
     const fetchStars = async () => {
       try {
-        const response = await fetch(`https://api.github.com/repos/garth-athena/athena-status-page`);
+        const response = await fetch(
+          `https://api.github.com/repos/garth-athena/athena-status-page`
+        );
         if (!response.ok) {
-          throw new Error('Network response was not ok');
+          throw new Error("Network response was not ok");
         }
         const data = await response.json();
         setState({
-          status: 'success',
+          status: "success",
           stars: data.stargazers_count,
         });
       } catch (error) {
         setState({
-          status: 'error',
+          status: "error",
           stars: null,
         });
-        throw new Error('Error fetching');
+        throw new Error("Error fetching");
       }
     };
 
