@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { origin } from "../constants/origin";
 
 const useRates = () => {
   const [state, setState] = useState({
@@ -11,7 +12,7 @@ const useRates = () => {
     const handleFetch = async () => {
       try {
         const response = await fetch(
-          `https://www.athena-dev.life/rates/api/v1/direct-extras`,
+          `${origin}/rates/api/v1/direct-extras`,
           {
             method: "GET",
           }
