@@ -1,13 +1,14 @@
+import { WindowLocationPathnameContextProvider } from "./contexts/WindowLocationPathnameContext";
 import { Footer } from "./layout/Footer";
 import { Header } from "./layout/Header";
-import { External } from "./pages/External";
+import { Routes } from "./Routes";
 
 export const App = () => (
-  <div>
+  <WindowLocationPathnameContextProvider>
     <Header />
     <main>
-      <External />
+      <Routes />
     </main>
     <Footer />
-  </div>
+  </WindowLocationPathnameContextProvider>
 );
