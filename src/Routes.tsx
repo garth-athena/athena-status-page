@@ -8,9 +8,9 @@ export const Routes = () => {
   return (
     <Router>
       {{
-        "/athena-status-page/": <External />,
-        "/athena-status-page/internal/": <Internal />,
-        "/athena-status-page/not-found/": <NotFound />,
+        "#/": <External />,
+        "#/internal/": <Internal />,
+        "#/not-found/": <NotFound />,
       }}
     </Router>
   );
