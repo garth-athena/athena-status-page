@@ -36,7 +36,7 @@ export const Bitbucket = () => {
 							<p style={{ marginBottom: 4, marginTop: 0 }}>
 								URL:{" "}
 								<strong style={{ fontWeight: 700 }}>
-									https://api.status.salesforce.com/v1/instances/AUS74/status
+									https://bitbucket.status.atlassian.com/api/v2/summary.json
 								</strong>
 							</p>
 							<p style={{ marginBottom: 0, marginTop: 0 }}>
