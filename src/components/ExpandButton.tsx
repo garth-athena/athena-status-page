@@ -1,22 +1,28 @@
-import { expandCircle, Icon } from "./Icon";
+import { ReactNode } from "react";
 
-export const ExpandButton = ({ onClick }: { onClick: () => void }) => {
+export const ExpandButton = ({
+  children,
+  onClick,
+}: {
+  children: ReactNode;
+  onClick: () => void;
+}) => {
   return (
     <button
       onClick={onClick}
       style={{
         appearance: "none",
         background: "none",
+        boxSizing: "border-box",
         border: "none",
-        borderRadius: "50%",
-        padding: 0,
-        position: "absolute",
-        right: 16,
-        top: 16,
+        display: "block",
+        padding: 16,
+        textAlign: "left",
+        width: "100%",
       }}
       title={"Expand"}
     >
-      <Icon d={expandCircle} style={{ height: 24, width: 24 }} />
+      {children}
     </button>
   );
 };

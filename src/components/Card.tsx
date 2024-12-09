@@ -6,7 +6,7 @@ export const Card = ({ children }: { children: ReactNode }) => {
       style={{
         borderRadius: 4,
         borderStyle: "solid",
-        padding: 16,
+        padding: 0,
         position: "relative",
       }}
     >

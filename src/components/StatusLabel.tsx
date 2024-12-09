@@ -6,8 +6,10 @@ export const StatusLabel = ({ status }: { status: number }) => (
     style={{
       backgroundColor: statusColors[status as keyof typeof statusColors],
       borderRadius: 4,
+      color: "white",
+      fontSize: 12,
       fontWeight: 700,
-      height: 24,
+      lineHeight: 1,
       paddingBottom: 8,
       paddingLeft: 16,
       paddingRight: 16,

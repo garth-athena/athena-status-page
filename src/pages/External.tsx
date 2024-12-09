@@ -1,6 +1,6 @@
 import { origin } from "../constants/origin";
 import { CRM } from "../components/CRM";
-import { GetRequestStatusCard } from "../components/GetRequestStatusCard";
+import { RequestStatusCard } from "../components/RequestStatusCard";
 import { serviceabilityPayload } from "../constants/serviceabilityPayload";
 
 const services = [
@@ -24,7 +24,6 @@ const services = [
   {
     name: "Property address",
     url: `${origin}/property/api/v2/address`,
-    method: "POST",
     payload: {
       valid: true,
       longitude: 151.2041531,
@@ -39,7 +38,6 @@ const services = [
   {
     name: "Serviceability",
     url: `${origin}/serviceability/v5/calculate`,
-    method: "POST",
     payload: serviceabilityPayload,
   },
 ];
@@ -50,10 +48,11 @@ export const External = () => (
     <p>Banner — General manual message to customers.</p>
     <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
       {services.map((service) => (
-        <GetRequestStatusCard
+        <RequestStatusCard
           key={service.name}
           name={service.name}
           url={service.url}
+          payload={service.payload}
         />
       ))}
       <CRM />
