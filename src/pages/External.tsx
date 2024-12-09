@@ -51,19 +51,55 @@ const services = [
 ];
 
 export const External = () => (
-  <div>
-    <h1 style={{ fontWeight: 500 }}>Athena's status</h1>
-    <p>Banner — General manual message to customers.</p>
-    <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-      {services.map((service) => (
-        <RequestStatusCard
-          key={service.name}
-          name={service.name}
-          url={service.url}
-          payload={service.payload}
-        />
-      ))}
-      <CRM />
+  <div
+    style={{ display: "flex", flexDirection: "column", gap: 16, marginTop: 32 }}
+  >
+    <div
+      style={{
+        backgroundColor: "pink",
+        borderRadius: 4,
+        color: "purple",
+        fontSize: 16,
+        fontWeight: 700,
+        lineHeight: 1,
+        paddingBottom: 16,
+        paddingLeft: 16,
+        paddingRight: 16,
+        paddingTop: 16,
+        // width: "max-content",
+      }}
+    >
+      <p style={{ margin: 0 }}>Notice — no general updates at this time.</p>
     </div>
+    <h1 style={{ fontWeight: 500, margin: 0 }}>Athena's status</h1>
+    {/* TODO */}
+    {/* <div
+      style={{
+        backgroundColor: "green",
+        borderRadius: 4,
+        color: "white",
+        fontSize: 16,
+        fontWeight: 700,
+        lineHeight: 1,
+        paddingBottom: 16,
+        paddingLeft: 16,
+        paddingRight: 16,
+        paddingTop: 16,
+        // width: "max-content",
+      }}
+    >
+      <p style={{ margin: 0 }}>
+        All systems operational
+      </p>
+    </div> */}
+    {services.map((service) => (
+      <RequestStatusCard
+        key={service.name}
+        name={service.name}
+        url={service.url}
+        payload={service.payload}
+      />
+    ))}
+    <CRM />
   </div>
 );
