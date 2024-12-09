@@ -15,14 +15,10 @@ export const Bitbucket = () => {
 		case "All Systems Operational":
 			status = 200;
 			break;
-		case "X - Conor to populate from Bitbucket doco":
-		case "Y":
-		case "Z":
+		case "Major Service Outage":
 			status = 500;
 			break;
-		case "A":
-		case "B":
-		case "C":
+		case "Partial System Outage":
 			status = 401;
 			break;
 	}
