@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useAddressAutocomplete = () => {
+const useRates = () => {
   const [state, setState] = useState({
     status: "pending",
     data: null,
@@ -10,12 +10,11 @@ const useAddressAutocomplete = () => {
     const handleFetch = async () => {
       try {
         const response = await fetch(
-          `https://www.athena.com.au/property/api/v1/address/autocomplete?term=81%20grandview%20dr`,
+          `https://www.athena.com.au/rates/api/v1/direct-extras`,
           {
             method: "GET",
           }
         );
-        console.log(response);
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
@@ -39,4 +38,4 @@ const useAddressAutocomplete = () => {
   return state;
 };
 
-export default useAddressAutocomplete;
+export default useRates;
