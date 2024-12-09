@@ -1,7 +1,20 @@
 import { useState, useEffect } from "react";
 
+interface BitbucketStatus {
+  description: string;
+}
+
+interface BitbucketData {
+  status: BitbucketStatus;
+}
+
+interface BitbucketState {
+  status: "pending" | "success" | "error";
+  data: BitbucketData | null;
+}
+
 const useBitbucket = () => {
-  const [state, setState] = useState({
+  const [state, setState] = useState<BitbucketState>({
     status: "pending",
     data: null,
   });
@@ -18,7 +31,7 @@ const useBitbucket = () => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
-        const data = await response.json();
+        const data: BitbucketData = await response.json();
         setState({
           status: "success",
           data,
