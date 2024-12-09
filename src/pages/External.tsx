@@ -40,6 +40,10 @@ const services = [
     url: `${origin}/serviceability/v5/calculate`,
     payload: serviceabilityPayload,
   },
+  {
+    name: "Authentication",
+    url: `https://status.auth0.com/api/auth/me`,
+  },
 ];
 
 export const External = () => (
