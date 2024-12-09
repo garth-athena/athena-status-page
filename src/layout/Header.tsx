@@ -7,7 +7,7 @@ export const Header = () => {
     <header style={{ display: "flex" }}>
       <a
         title="Athena Status Page"
-        href="/"
+        href="/athena-status-page/"
         style={{ display: "block", width: 54 }}
       >
         <Image src="./athena.png" alt="athena" aspectRatio="540 / 480"></Image>
