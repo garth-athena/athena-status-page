@@ -4,6 +4,7 @@ import { Overview } from "../components/Overview";
 import { Property } from "../components/Property";
 import { Rates } from "../components/Rates";
 import { Serviceability } from "../components/Serviceability";
+import { Bitbucket } from "../components/bitbucket";
 
 export const External = () => (
   <div>
@@ -14,5 +15,6 @@ export const External = () => (
     <Serviceability />
     <CRM />
     <Property />
+    <Bitbucket />
   </div>
 );
