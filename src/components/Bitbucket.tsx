@@ -1,21 +1,60 @@
 import useBitbucket from "../hooks/useBitbucket";
+import { useState } from "react";
+import { Expand } from "./Expand";
+import { StatusLabel } from "./StatusLabel";
+import { Card } from "./Card";
+import { CardTitle } from "./CardTitle";
+import { ExpandButton } from "./ExpandButton";
 
 export const Bitbucket = () => {
-  const { status, data } = useBitbucket();
-  console.log(data);
+	const { data } = useBitbucket();
+	const [expanded, setExpanded] = useState(false);
 
-  if (status === "pending") {
-    return <div>Loading...</div>;
-  }
+	let status = 0;
+	switch (data?.status.description) {
+		case "All Systems Operational":
+			status = 200;
+			break;
+		case "X - Conor to populate from Bitbucket doco":
+		case "Y":
+		case "Z":
+			status = 500;
+			break;
+		case "A":
+		case "B":
+		case "C":
+			status = 401;
+			break;
+	}
+	if (!data) {
+		return <div>Loading...</div>;
+	}
+	return (
+		<Card>
+			<ExpandButton onClick={() => setExpanded(!expanded)}>
+				<CardTitle>Bitbucket</CardTitle>
+				<StatusLabel status={status} />
+				<div style={{ marginTop: 8 }}>
+					<Expand expand={expanded}>
+						<div style={{ paddingTop: 12 }}>
+							<p style={{ marginBottom: 4, marginTop: 0 }}>
+								URL:{" "}
+								<strong style={{ fontWeight: 700 }}>
+									https://api.status.salesforce.com/v1/instances/AUS74/status
+								</strong>
+							</p>
+							<p style={{ marginBottom: 0, marginTop: 0 }}>
+								Status:{" "}
+								<strong style={{ fontWeight: 700 }}>
+									{status}
+								</strong>
+							</p>
+						</div>
+					</Expand>
+				</div>
+			</ExpandButton>
+		</Card>
+	);
+};
 
-  if (status === "error" || !data) {
-    return <div>Error loading data</div>;
-  }
 
-  return (
-    <div>
-      <h2>Bitbucket Status</h2>
-      {data.status.description}
-    </div>
-  );
-}
