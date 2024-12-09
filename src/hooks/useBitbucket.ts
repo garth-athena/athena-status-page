@@ -10,7 +10,7 @@ const useBitbucket = () => {
     const fetchBitbucketapi = async () => {
       try {
         const response = await fetch(
-          `https://api.bitbucket.org`,
+          `https://bitbucket.status.atlassian.com/api/v2/status.json`,
           {
             method: "GET",
           }
