@@ -4,11 +4,13 @@ import { Header } from "./layout/Header";
 import { Routes } from "./Routes";
 
 export const App = () => (
-  <WindowLocationPathnameContextProvider>
-    <Header />
-    <main>
-      <Routes />
-    </main>
-    <Footer />
-  </WindowLocationPathnameContextProvider>
+  <div style={{ padding: 16 }}>
+    <WindowLocationPathnameContextProvider>
+      <Header />
+      <main>
+        <Routes />
+      </main>
+      <Footer />
+    </WindowLocationPathnameContextProvider>
+  </div>
 );

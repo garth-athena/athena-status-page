@@ -1,18 +1,14 @@
 import { useState, useEffect } from "react";
-import { origin } from "../constants/origin";
 
-const useAddressAutocomplete = () => {
+const useStatus = (url: string) => {
   const [status, setState] = useState(0);
 
   useEffect(() => {
     const handleFetch = async () => {
       try {
-        const response = await fetch(
-          `${origin}/property/api/v1/address/autocomplete?term=81%20grandview%20dr`,
-          {
-            method: "GET",
-          }
-        );
+        const response = await fetch(url, {
+          method: "GET",
+        });
         setState(response.status);
       } catch (error) {
         throw new Error("Error fetching");
@@ -25,4 +21,4 @@ const useAddressAutocomplete = () => {
   return status;
 };
 
-export default useAddressAutocomplete;
+export default useStatus;
