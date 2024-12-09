@@ -22,24 +22,22 @@ export const RequestStatusCard = ({
       <ExpandButton onClick={() => setExpanded(!expanded)}>
         <CardTitle>{name}</CardTitle>
         <StatusLabel status={status} />
-        <div>
-          <Expand expand={expanded}>
-            <div style={{ paddingTop: 12 }}>
-              <p
-                style={{
-                  marginBottom: 4,
-                  marginTop: 0,
-                  wordBreak: "break-all",
-                }}
-              >
-                URL: <strong style={{ fontWeight: 700 }}>{url}</strong>
-              </p>
-              <p style={{ marginBottom: 0, marginTop: 0 }}>
-                Status: <strong style={{ fontWeight: 700 }}>{status}</strong>
-              </p>
-            </div>
-          </Expand>
-        </div>
+        <Expand expand={expanded}>
+          <div style={{ paddingTop: 12 }}>
+            <p
+              style={{
+                marginBottom: 4,
+                marginTop: 0,
+                wordBreak: "break-all",
+              }}
+            >
+              URL: <strong style={{ fontWeight: 700 }}>{url}</strong>
+            </p>
+            <p style={{ marginBottom: 0, marginTop: 0 }}>
+              Status: <strong style={{ fontWeight: 700 }}>{status}</strong>
+            </p>
+          </div>
+        </Expand>
       </ExpandButton>
     </Card>
   );
