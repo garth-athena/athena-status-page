@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
-import { origin } from "../constants/origin";
+import { production } from "../constants/origin";
 
-const useAddressAutocomplete = () => {
+const useWebsite = () => {
   const [status, setState] = useState(0);
 
   useEffect(() => {
     const handleFetch = async () => {
       try {
         const response = await fetch(
-         `${origin}/property/api/v1/address/autocomplete?term=81%20grandview%20dr`,
+         `${production}`,
           {
             method: "GET",
           }
@@ -25,4 +25,4 @@ const useAddressAutocomplete = () => {
   return status;
 };
 
-export default useAddressAutocomplete;
+export default useWebsite;
