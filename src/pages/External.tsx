@@ -101,7 +101,7 @@ export const External = () => (
       {services.map((service) => (
         <div
           key={service.name}
-          style={{ flexBasis: 600, flexGrow: 0, flexShrink: 1 }}
+          style={{ flexBasis: 600, flexGrow: 1, flexShrink: 1 }}
         >
           <RequestStatusCard
             name={service.name}
@@ -110,7 +110,7 @@ export const External = () => (
           />
         </div>
       ))}
-      <div style={{ flexBasis: 600, flexGrow: 0, flexShrink: 1 }}>
+      <div style={{ flexBasis: 600, flexGrow: 1, flexShrink: 1 }}>
         <CRM />
       </div>
     </div>
