@@ -25,7 +25,13 @@ export const RequestStatusCard = ({
         <div>
           <Expand expand={expanded}>
             <div style={{ paddingTop: 12 }}>
-              <p style={{ marginBottom: 4, marginTop: 0 }}>
+              <p
+                style={{
+                  marginBottom: 4,
+                  marginTop: 0,
+                  wordBreak: "break-all",
+                }}
+              >
                 URL: <strong style={{ fontWeight: 700 }}>{url}</strong>
               </p>
               <p style={{ marginBottom: 0, marginTop: 0 }}>
