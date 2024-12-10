@@ -26,9 +26,7 @@ export const CRM = () => {
       status = 401;
       break;
   }
-  if (!data) {
-    return <div>Loading...</div>;
-  }
+
   return (
     <Card>
       <ExpandButton onClick={() => setExpanded(!expanded)}>

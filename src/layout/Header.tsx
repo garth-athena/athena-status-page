@@ -4,7 +4,9 @@ import { useGoToHash } from "../hooks/useGoToHash";
 export const Header = () => {
   const goToHash = useGoToHash();
   return (
-    <header style={{ display: "flex" }}>
+    <header
+      style={{ display: "flex", gap: 32, justifyContent: "space-between" }}
+    >
       <a
         title="Athena Status Page"
         href="/athena-status-page/"
@@ -15,12 +17,16 @@ export const Header = () => {
       <nav>
         <ul style={{ display: "flex", listStyle: "none", gap: 16 }}>
           <li>
-            <a href="#/" onClick={goToHash}>
+            <a href="#/" onClick={goToHash} style={{ textDecoration: "none" }}>
               External
             </a>
           </li>
           <li>
-            <a href="#/internal/" onClick={goToHash}>
+            <a
+              href="#/internal/"
+              onClick={goToHash}
+              style={{ textDecoration: "none" }}
+            >
               Internal
             </a>
           </li>
