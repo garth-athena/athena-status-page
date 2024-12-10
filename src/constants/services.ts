@@ -19,7 +19,7 @@ export const services = [
 		name: "Policy",
 		url: `${origin}/policy/api/v1/address/postcodeLookup?postcode=2000&propertyType=HOUSE`,
 	},
-	 {
+	/* {
 	   name: "Property address",
 	   url: `${origin}/property/api/v2/address`,
 	   payload: {
@@ -32,7 +32,7 @@ export const services = [
 	     street: { type: "Street", number: "347", name: "Kent" },
 	     buildingName: null,
 	   },
-	 },
+	 },*/
 	{
 		name: "Serviceability",
 		url: `${origin}/serviceability/v5/calculate`,
