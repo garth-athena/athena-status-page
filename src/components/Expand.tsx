@@ -16,7 +16,6 @@ export const Expand = ({
       setHeight(ref.current.clientHeight);
     }
   }, [expand]);
-
   useEffect(() => {
     if (ref.current) {
       setHeight(ref.current.clientHeight);

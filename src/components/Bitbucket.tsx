@@ -30,7 +30,9 @@ export const Bitbucket = () => {
         <StatusLabel status={status} />
         <Expand expand={expanded}>
           <div style={{ paddingTop: 12 }}>
-            <p style={{ marginBottom: 4, marginTop: 0 }}>
+            <p
+              style={{ marginBottom: 4, marginTop: 0, wordBreak: "break-all" }}
+            >
               URL:{" "}
               <strong style={{ fontWeight: 700 }}>
                 https://bitbucket.status.atlassian.com/api/v2/summary.json
