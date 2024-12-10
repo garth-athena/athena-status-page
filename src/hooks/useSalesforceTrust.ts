@@ -13,7 +13,7 @@ interface Instance {
 	GeneralMessages: GeneralMessage[];
 }
 
-interface Incident {
+export interface Incident {
 	id: number;
 	message: string | null;
 	externalId: string | null;
@@ -39,7 +39,7 @@ interface IncidentImpact {
 	updatedAt: string;
 }
 
-interface IncidentEvent {
+export interface IncidentEvent {
 	id: number;
 	type: string;
 	message: string;
