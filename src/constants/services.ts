@@ -8,7 +8,7 @@ export const services = [
 	},
 	{ name: "Rates", url: `${origin}/rates/api/v1/standard` },
 	{
-		name: "Address autocomplete",
+		name: "Address",
 		url: `${origin}/property/api/v1/address/autocomplete?term=347%20kent%20st`,
 	},
 	{
@@ -16,7 +16,7 @@ export const services = [
 		url: `${origin}/property/api/v1/address/parse?term=347%20Kent%20St,%20Sydney%20NSW%202000`,
 	},
 	{
-		name: "Postcode lookup (policy service)",
+		name: "Policy",
 		url: `${origin}/policy/api/v1/address/postcodeLookup?postcode=2000&propertyType=HOUSE`,
 	},
 	// {
