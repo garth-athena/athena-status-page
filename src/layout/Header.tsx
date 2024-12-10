@@ -16,7 +16,7 @@ export const Header = () => {
       <a
         title="Athena Status Page"
         href="/athena-status-page/"
-        style={{ display: "block", width: 54 }}
+        style={{ display: "block", width: 54, minWidth: 54 }}
       >
         <Image src="./athena.png" alt="athena" aspectRatio="540 / 480"></Image>
       </a>
