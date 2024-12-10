@@ -18,7 +18,7 @@ const useStatus = (url: string, payload?: any) => {
     };
 
     handleFetch();
-    const intervalId = setInterval(handleFetch, 60 * 1000);
+    const intervalId = setInterval(handleFetch, 30 * 1000);
 
     return () => clearInterval(intervalId);
   }, [url, payload]);
