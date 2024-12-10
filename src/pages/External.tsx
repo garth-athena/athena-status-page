@@ -15,6 +15,9 @@ export const External = () => (
         fontSize: 16,
         fontWeight: 700,
         lineHeight: 1,
+        marginLeft: "auto",
+        marginRight: "auto",
+        maxWidth: 1200,
         paddingBottom: 16,
         paddingLeft: 16,
         paddingRight: 16,
@@ -24,10 +27,12 @@ export const External = () => (
       <h2 style={{ fontSize: 20, marginBottom: 12, marginTop: 0 }}>
         Maintenance
       </h2>
-      <p style={{ margin: 0 }}>
-        We’re currently carrying out some maintenance on our platform. You will
-        not be able to access the Athena platform during this time. We apologise
-        for any inconvenience this may cause.
+      <p style={{ lineHeight: 1.5, margin: 0 }}>
+        We’re currently carrying out some maintenance on our platform 1st
+        January 2025. We apologise for any inconvenience this may cause. If you
+        have an urgent enquiry give us a buzz on{" "}
+        <a href="tel:133535">13 35 35</a> or SMS us on{" "}
+        <a href="sms:0429333555">0429 333 555</a>.
       </p>
     </div>
     <div
