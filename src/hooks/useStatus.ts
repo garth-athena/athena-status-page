@@ -5,6 +5,7 @@ const useStatus = (url: string, payload?: any) => {
 
   useEffect(() => {
     const handleFetch = async () => {
+      setState(0);
       try {
         const response = await fetch(url, {
           method: payload ? "POST" : "GET",
@@ -17,7 +18,10 @@ const useStatus = (url: string, payload?: any) => {
     };
 
     handleFetch();
-  }, []);
+    const intervalId = setInterval(handleFetch, 60 * 1000);
+
+    return () => clearInterval(intervalId);
+  }, [url, payload]);
 
   return status;
 };
