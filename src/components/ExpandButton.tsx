@@ -15,6 +15,7 @@ export const ExpandButton = ({
         background: "none",
         boxSizing: "border-box",
         border: "none",
+        color: "inherit",
         display: "block",
         padding: 16,
         textAlign: "left",

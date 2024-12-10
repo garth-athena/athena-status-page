@@ -1,6 +1,6 @@
 :root {
-  --color: rgba(255, 255, 255, 0.87);
-  --background-color: #242424;
+  --color: #ffffff;
+  --background-color: #000000;
 
   font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -38,10 +38,10 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    --color: #213547;
+    --color: #000000;
     --background-color: #ffffff;
 
-    color: #213547;
+    color: #000000;
     background-color: #ffffff;
   }
 }
