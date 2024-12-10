@@ -6,9 +6,10 @@ export const SFIncident = ({ incident }: { incident: Incident }) => {
 		<div
 			style={{
 				borderColor: "rgba(127.5, 127.5, 127.5, 0.5)",
-				borderLeft: "solid",
-				borderWidth: 1,
-				paddingLeft: 4,
+				borderStyle: "solid",
+				borderWidth: 0,
+				borderLeftWidth: 1,
+				paddingLeft: 12,
 				position: "relative",
 			}}
 		>
