@@ -11,6 +11,8 @@ export const star =
 export const warn = "M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z";
 export const expandCircle =
   "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 13.5L7.5 11l1.42-1.41L12 12.67l3.08-3.08L16.5 11z";
+export const contrast =
+  "M12 22c5.52 0 10-4.48 10-10S17.52 2 12 2 2 6.48 2 12s4.48 10 10 10m1-17.93c3.94.49 7 3.85 7 7.93s-3.05 7.44-7 7.93z";
 
 export const Icon = ({ d, style }: { d: string; style: CSSProperties }) => {
   const icon: CSSProperties = { display: "block", ...style };

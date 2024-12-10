@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { contrast, Icon } from "./Icon";
 
 export const ModeButton = () => {
   const [mode, setMode] = useState<"light" | "dark">(() => {
@@ -31,13 +32,13 @@ export const ModeButton = () => {
         backgroundColor: "transparent",
         border: "none",
         color: "inherit",
-        display: "inline",
+        display: "block",
         fontFamily: "inherit",
         fontSize: 16,
         padding: 0,
       }}
     >
-      {mode === "light" ? "Dark" : "Light"} Mode
+      <Icon d={contrast} style={{ display: "block", height: 20, width: 20 }} />
     </button>
   );
 };

@@ -7,6 +7,7 @@ export const Header = () => {
   return (
     <header
       style={{
+        alignItems: "center",
         display: "flex",
         flexWrap: "wrap",
         gap: 32,
@@ -16,27 +17,47 @@ export const Header = () => {
       <a
         title="Athena Status Page"
         href="/athena-status-page/"
-        style={{ display: "block", width: 54, minWidth: 54 }}
+        style={{ display: "block", height: 54, minWidth: 54, width: 54 }}
       >
         <Image src="./athena.png" alt="athena" aspectRatio="540 / 480"></Image>
       </a>
       <nav>
-        <ul style={{ display: "flex", listStyle: "none", gap: 16, padding: 0 }}>
-          <li>
-            <a href="#/" onClick={goToHash} style={{ textDecoration: "none" }}>
+        <ul
+          style={{
+            display: "flex",
+            listStyle: "none",
+            gap: 16,
+            margin: 0,
+            padding: 0,
+          }}
+        >
+          <li style={{ display: "block" }}>
+            <a
+              href="#/"
+              onClick={goToHash}
+              style={{
+                display: "block",
+                lineHeight: 20 / 16,
+                textDecoration: "none",
+              }}
+            >
               External
             </a>
           </li>
-          <li>
+          <li style={{ display: "block" }}>
             <a
               href="#/internal/"
               onClick={goToHash}
-              style={{ textDecoration: "none" }}
+              style={{
+                display: "block",
+                lineHeight: 20 / 16,
+                textDecoration: "none",
+              }}
             >
               Internal
             </a>
           </li>
-          <li>
+          <li style={{ display: "block" }}>
             <ModeButton />
           </li>
         </ul>
