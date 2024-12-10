@@ -28,10 +28,10 @@ export const External = () => (
         Maintenance
       </h2>
       <p style={{ lineHeight: 1.5, margin: 0 }}>
-        We’re currently carrying out some maintenance on our platform 1st
-        January 2025. We apologise for any inconvenience this may cause. If you
-        have an urgent enquiry give us a buzz on{" "}
-        <a href="tel:133535">13 35 35</a> or SMS us on{" "}
+        A vendor of Athena will be carrying out some maintenance on their
+        platform on 1st January 2025. We do not expect any disruption to our
+        service. If you do experience any issues or have an urgent enquiry give
+        us a buzz on <a href="tel:133535">13 35 35</a> or SMS us on{" "}
         <a href="sms:0429333555">0429 333 555</a>.
       </p>
     </div>
