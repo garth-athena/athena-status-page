@@ -5,9 +5,11 @@ import { services } from "../constants/services";
 
 export const Internal = () => (
   <div
-    style={{ display: "flex", flexDirection: "column", gap: 32, marginTop: 32 }}
+    style={{ display: "flex", flexDirection: "column", gap: 48, marginTop: 48 }}
   >
-    <h1 style={{ fontWeight: 500, margin: 0 }}>Athena's status</h1>
+    <h1 style={{ fontSize: 40, fontWeight: 700, margin: 0 }}>
+      Athena's status
+    </h1>
     <div
       style={{
         display: "flex",

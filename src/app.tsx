@@ -4,10 +4,19 @@ import { Header } from "./layout/Header";
 import { Routes } from "./Routes";
 
 export const App = () => (
-  <div style={{ padding: 32 }}>
+  <div
+    style={{
+      boxSizing: "border-box",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "space-between",
+      minHeight: "100vh",
+      padding: 32,
+    }}
+  >
     <WindowLocationHashContextProvider>
       <Header />
-      <main>
+      <main style={{ maxWidth: 1216, marginLeft: "auto", marginRight: "auto" }}>
         <Routes />
       </main>
       <Footer />

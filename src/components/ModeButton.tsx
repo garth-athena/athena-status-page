@@ -34,8 +34,7 @@ export const ModeButton = () => {
         color: "inherit",
         display: "block",
         fontFamily: "inherit",
-        fontSize: 16,
-        padding: 0,
+        padding: 16,
       }}
     >
       <Icon d={contrast} style={{ display: "block", height: 20, width: 20 }} />
